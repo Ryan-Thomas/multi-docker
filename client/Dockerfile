@@ -17,4 +17,6 @@ COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 # will be under the app folder. The npm install and npm run build commands
 # will put everything in a build folder that we can just copy over to 
 # usr/share/nginx/html, which is the default location nginx looks for files to host
+
+#   - docker run -e CI=true USERNAME/react-test npm test
 COPY --from=builder /app/build /usr/share/nginx/html
