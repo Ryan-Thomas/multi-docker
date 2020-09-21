@@ -10,7 +10,7 @@ script:
     - docker run -e CI=true ryanthomas/react-test npm test
     
 after_success:
-    - docker build -t ryan-thomas/multi-client ./client
+    - docker build -t ryanthomas/multi-client ./client
     - docker build -t ryanthomas/multi-nginx ./nginx
     - docker build -t ryanthomas/multi-server ./server
     - docker build -t ryanthomas/multi-worker ./worker
